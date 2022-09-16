@@ -1,0 +1,40 @@
+Q1.1 : No, not working
+Q1.2 : only 1 time
+
+Q2.1 : Yes
+Q2.2 : 1 time
+Q2.3 : Use exit(0) before line 22?
+Q2.4 : Remove else of parent process then use exit(0) in child process's if{} to end child process.
+
+Q3.1 : /usr/bin/ls /usr/share/man/man1/ls.1.gz
+Q3.2 : /usr/bin/whoami /mnt/c/Windows/system32/whoami.exe /usr/share/man/man1/whoami.1.gz
+Q3.3 : /usr/bin/ps /usr/share/man/man1/ps.1.gz
+Q3.4 : type is a shell builtin
+Q3.5 : cd is a shell builtin
+Q3.6 : No, it won't work
+
+Q4 : pid = fork();
+     if (pid == 0) {
+             if (userChoice == 'a') {
+                     execlp("ls", "ls", "-l", NULL);
+                     printf("if a is error");
+             } else if (userChoice == 'b') {
+                     execlp("ps", "ps", NULL);
+                     printf("if b is error");
+             } else if (userChoice == 'c') {
+                     execlp("whoami", "whoami", NULL);
+                     printf("if c is error");
+             } else if (userChoice == 'q') {
+                     printf("Thank you for using our software!\n");
+                     printf("we'll send payment choice for you in the near future\n");
+             } else {
+                     printf("Stop being nonsense and Input only the character that are given above!");
+             }
+             exit(0);
+     }
+     //      printf("Program is running!\n");
+     //      printf("Please be patient.\n");
+     wait (NULL);
+     printf("Thank you for your waiting.\n");
+     
+     /*The whole file name is 502_Lab5q4.c */

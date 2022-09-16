@@ -1,0 +1,19 @@
+cd \q2\sub1
+md ..\sub2
+copy F11.txt ..\sub2\F21.txt
+copy F12.txt ..\sub2\F22.txt
+copy .\sub3\F13.txt ..\sub2\F23.txt
+move ..\sub2\F22.txt ..\sub2\F22.doc
+REM 1 : absolute
+REM 2 : relative
+REM 3 : relative
+REM 4 : relative
+REM 5 : relative
+REM 6 : relative
+REM 8 : relative-relative
+REM 9 : absolute
+REM 10 : relative-relative
+REM 11 : relative-absolute
+REM 2.3 is already done when I used "move" command to change F22.txt to F22.doc in the 6th line, 
+REM but we can also use "ren" command to change file's name. 
+REM ex(assume that we're in q2 directory) : ren sub2\F22.txt F22.doc
